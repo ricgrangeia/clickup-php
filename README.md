@@ -85,6 +85,10 @@ $space = $team->spaces()->getByName('spaaaaace');
 $space->folders()->objects();
 // -> \ClickUp\Objects\Folder[]
 
+$space->tags()->objects();
+// -> \ClickUp\Objects\Tag[]
+
+
 // folder by folder id
 $folder = $space->folder(11111);
 // folder by name
@@ -150,6 +154,15 @@ $taskList->edit(['name' => 'renamed task list']);
  * @see https://jsapi.apiary.io/apis/clickup20/reference/0/lists/update-list.html
  */
 $task->edit(['name' => 'renamed task']);
+```
+
+### delete
+```php
+/**
+ * delete task
+ * @see https://clickup.com/api/
+ */
+$client->taskFinder('teamId')->getByTaskId('task_id')->delete();
 ```
 
 ### Storage
