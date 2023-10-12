@@ -36,6 +36,9 @@ class Space extends AbstractObject
     /* @var FolderCollection|null $folders */
     private $folders = null;
 
+	/* @var TagCollection|null $tags */
+	private $tags = null;
+
     /**
      * @return string
      */
@@ -96,6 +99,23 @@ class Space extends AbstractObject
 
         return $this->folders;
     }
+
+	/**
+	 * @throws GuzzleException
+	 *
+	 * @return TagCollection
+	 */
+	public function tags(): ?TagCollection
+	{
+		if (is_null($this->tags)) {
+			$this->tags = new TagCollection(
+				$this,
+				$this->client()->get("space/{$this->id()}/tag")['tags']
+			);
+		}
+
+		return $this->tags;
+	}
 
     /**
      * @return int

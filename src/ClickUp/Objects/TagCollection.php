@@ -10,6 +10,13 @@ namespace ClickUp\Objects;
  */
 class TagCollection extends AbstractObjectCollection
 {
+
+	public function __construct(Space $space, $array)
+	{
+		parent::__construct($space->client(), $array);
+	}
+
+
     /**
      * @param array $array
      */
