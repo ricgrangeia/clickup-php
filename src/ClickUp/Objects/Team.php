@@ -120,6 +120,5 @@ class Team extends AbstractObject
         $this->color = $array['color'];
         $this->avatar = $array['avatar'];
         $this->members = new TeamMemberCollection($this, $array['members']);
-        $this->roles = new TeamRoleCollection($this, $array['roles'] ?? []);
     }
 }

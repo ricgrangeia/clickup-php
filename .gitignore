@@ -1,5 +1,6 @@
 /vendor/
 /build/
+composer.phar
 composer.lock
-sh.php
+index.php
 .idea

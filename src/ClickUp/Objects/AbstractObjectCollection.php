@@ -55,9 +55,9 @@ abstract class AbstractObjectCollection extends AbstractObject implements Iterat
     }
 
     /**
-     * @return ArrayIterator|Traversable
+     * @return Traversable
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new ArrayIterator($this->objects());
     }
