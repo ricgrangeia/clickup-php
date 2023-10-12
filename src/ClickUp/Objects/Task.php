@@ -390,6 +390,18 @@ class Task extends AbstractObject
         return $this->client()->put("task/{$this->id()}", $body);
     }
 
+	/**
+	 * @see https://api.clickup.com/api/v2/task/"task_id"
+	 *
+	 * @action delete
+	 *
+	 * @return array
+	 */
+	public function delete()
+	{
+		return $this->client()->delete("task/{$this->id()}");
+	}
+
     /**
      * @see https://jsapi.apiary.io/apis/clickup20/reference/0/custom-fields/set-custom-field-value.html
      *

@@ -227,6 +227,18 @@ class Client
         return $this->decodeBody($response);
     }
 
+	/**
+	 * @param string $method
+	 * @param array $body
+	 * @return mixed
+	 */
+	public function delete($method, $body = [])
+	{
+
+		return $this->guzzleClient->request('DELETE', $method, ['json' => $body])->getStatusCode();
+	}
+
+
     /**
      * Decode Body.
      *
