@@ -109,7 +109,7 @@ class Space extends AbstractObject
 	{
 		if (is_null($this->tags)) {
 			$this->tags = new TagCollection(
-				$this,
+				$this->client(),
 				$this->client()->get("space/{$this->id()}/tag")['tags']
 			);
 		}
