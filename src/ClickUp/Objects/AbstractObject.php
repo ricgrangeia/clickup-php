@@ -33,8 +33,7 @@ abstract class AbstractObject
 
     abstract protected function fromArray($array);
 
-    private function setExtra($array)
-    {
+    private function setExtra(array $array): void {
         $this->extra = $array;
     }
 
