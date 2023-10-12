@@ -2,9 +2,10 @@
 
 <p align="center"><img src="https://clickup.com/landing/images/integrations/clickup-api-beta.png"></p>
 
-Fork for the original repo [clickup-php](https://github.com/howyi/clickup-php) | Author: [howyi](https://github.com/howyi)
+Fork for the original repo [clickup-php](https://github.com/howyi/clickup-php) | Author: [howyi](https://github.
+com/howyi) and [Eduard9969](https://github.com/Eduard9969)
 
-A simple wrapper for [ClickUp](https://clickup.com/api) API (v1-BETA).
+A simple wrapper for [ClickUp](https://clickup.com/api) API (v2).
 
 Fork difference:
 - Api update to version 2 (in progress)
@@ -34,7 +35,7 @@ Add the following code:
 "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/Eduard9969/clickup-php.git"
+        "url": "https://github.com/ricgrangeia/clickup-php.git"
     }
 ]
 ```
