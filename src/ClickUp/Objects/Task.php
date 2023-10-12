@@ -431,6 +431,20 @@ class Task extends AbstractObject
         return $this->client()->post("task/{$this->id()}/tag/{$tagName}/");
     }
 
+	/**
+	 * @see https://clickup.com/api
+	 *
+	 * @param string $tagName
+	 *
+	 * @throws GuzzleException
+	 *
+	 * @return void
+	 */
+	public function removeTag(string $tagName)
+	{
+		return $this->client()->delete("task/{$this->id()}/tag/{$tagName}/");
+	}
+
     /**
      * @param $array
      *
