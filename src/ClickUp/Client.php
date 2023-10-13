@@ -191,7 +191,7 @@ class Client
 	/**
 	 * @throws GuzzleException
 	 *
-	 * @return TaskCollection
+	 * @return Task
 	 */
 	public function task(string $task_id): Task
 	{
