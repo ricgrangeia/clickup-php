@@ -395,10 +395,9 @@ class Task extends AbstractObject
 	 *
 	 * @action delete
 	 *
-	 * @return array
+	 * @return int
 	 */
-	public function delete()
-	{
+	public function delete(): int {
 		return $this->client()->delete("task/{$this->id()}");
 	}
 
