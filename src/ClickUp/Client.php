@@ -2,6 +2,7 @@
 
 namespace ClickUp;
 
+use ClickUp\Objects\Task;
 use ClickUp\Middleware\AuthRequest;
 use ClickUp\Objects\TaskCollection;
 use ClickUp\Middleware\RateLimiting;
@@ -184,6 +185,19 @@ class Client
 			$this,
 			$this->get('list/'.$list_id.'/task')['tasks'],
 			null
+		);
+	}
+
+	/**
+	 * @throws GuzzleException
+	 *
+	 * @return TaskCollection
+	 */
+	public function task(string $task_id): Task
+	{
+		return new Task(
+			$this,
+			$this->get('task/'.$task_id)
 		);
 	}
 
